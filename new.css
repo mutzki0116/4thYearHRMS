@@ -1,0 +1,116 @@
+body{
+	margin: 0;
+	padding: 0;
+  font-family: 'Varela Round', sans-serif;
+}
+
+/* Upper Navigation */
+
+.menu{
+	background-color: #c0392b;
+}
+
+/* Left Sidebar Navigation */
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 260px;
+  background-color: #e74c3c;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  font-family: 'Varela Round', sans-serif;
+}
+ 
+.sidebar a.active {
+  background-color:#c0392b;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color:#c0392b;
+  color: white;
+}
+
+div.content {
+  margin-left: 260px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+/* Right Side Menu Bar */
+
+.content .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  right: 0px;
+  z-index: 1;
+  top: 0;
+  background-color: #e74c3c;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  font-size: 36px;
+  margin-left: 210px;
+}
+
+
+/* ------------------ */
+
+.message{
+  position: fixed;
+  bottom:5px;
+  right: 28px;
+  width: 250px;
+}
+
+.chat-popup{
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border:1px black;
+  z-index: 9px;
+}
+
+.form-container{
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+  width: 290px;
+  height: 350px;
+}
+
+/* Media Queries */
+
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    display: none;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
